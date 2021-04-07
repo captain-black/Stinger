@@ -49,6 +49,13 @@ typedef NS_ENUM(NSInteger, STHookResult) {
 - (id)slf;
 - (SEL)sel;
 - (void)invokeAndGetOriginalRetValue:(void *)retLoc;
+
+/// 调用原方法实现(IMP).
+- (NSValue*)invokeOriginal;
+
+/// 调用原方法实现(IMP). 需要传入参数.
+/// @param useless 无用, 随便传什么参数, 一般传nil吧
+- (NSValue*)invokeOriginal:(void*)useless, ...;
 @end
 
 
