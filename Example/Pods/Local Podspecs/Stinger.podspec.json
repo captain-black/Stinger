@@ -1,6 +1,6 @@
 {
   "name": "Stinger",
-  "version": "0.2.6",
+  "version": "0.3.0",
   "summary": "Implementing HOOK & AOP using libffi for Objective-C.",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/eleme/Stinger",
@@ -13,11 +13,33 @@
   },
   "source": {
     "git": "https://github.com/eleme/Stinger.git",
-    "tag": "0.2.6"
+    "tag": "0.3.0"
   },
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "Stinger/Classes/**/*",
-  "vendored_libraries": "Stinger/Classes/libffi/libffi.a"
+  "pod_target_xcconfig": {
+    "DEFINES_MODULE": "YES"
+  },
+  "default_subspecs": [
+    "Core",
+    "libffi"
+  ],
+  "subspecs": [
+    {
+      "name": "libffi",
+      "source_files": "Stinger/libffi/**/*.{h,c,m,S}",
+      "public_header_files": "Stinger/libffi/**/*.{h}"
+    },
+    {
+      "name": "Core",
+      "source_files": "Stinger/Classes/**/*",
+      "public_header_files": "Stinger/Classes/**/*.{h}",
+      "dependencies": {
+        "Stinger/libffi": [
+
+        ]
+      }
+    }
+  ]
 }

@@ -1,1 +1,1 @@
-../../../../../Stinger/Classes/libffi/ffitarget_arm64.h
+../../../../../Stinger/libffi/darwin_ios/include/ffitarget_arm64.h

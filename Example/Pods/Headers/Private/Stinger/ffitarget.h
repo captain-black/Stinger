@@ -1,1 +1,1 @@
-../../../../../Stinger/Classes/libffi/ffitarget.h
+../../../../../Stinger/libffi/darwin_common/include/ffitarget.h

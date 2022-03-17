@@ -19,7 +19,7 @@
 @implementation ASViewController
 
 - (void)methodA {
-  
+    NSLog(@"methodA do somthing");
 }
 
 - (void)setFrame:(CGRect)rect {
@@ -29,10 +29,10 @@
 - (void)viewDidLoad {
   [super viewDidLoad];
   [self.class st_hookInstanceMethod:@selector(methodA) option:STOptionBefore usingIdentifier:@"hook methodA before" withBlock:^(id<StingerParams> params) {
-
+      NSLog(@"before methodA");
   }];
   [self.class st_hookInstanceMethod:@selector(methodA) option:STOptionAfter usingIdentifier:@"hook methodA after" withBlock:^(id<StingerParams> params) {
-
+      NSLog(@"after methodA");
   }];
   
 //  [self.class aspect_hookSelector:@selector(methodA) withOptions:AspectPositionBefore usingBlock:^(id<AspectInfo> params) {
@@ -45,7 +45,7 @@
 }
 
 - (IBAction)test:(id)sender {
-  for (NSInteger i = 0; i < 1000000; i++) {
+  for (NSInteger i = 0; i < 2; i++) {
     [self methodA];
   }
   NSLog(@"clicked!!");

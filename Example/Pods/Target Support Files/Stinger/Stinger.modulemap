@@ -1,4 +1,4 @@
-framework module Stinger {
+module Stinger {
   umbrella header "Stinger-umbrella.h"
 
   export *

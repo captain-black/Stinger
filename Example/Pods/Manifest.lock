@@ -1,13 +1,18 @@
 PODS:
   - Aspects (1.4.1)
-  - Stinger (0.2.6)
+  - Stinger (0.3.0):
+    - Stinger/Core (= 0.3.0)
+    - Stinger/libffi (= 0.3.0)
+  - Stinger/Core (0.3.0):
+    - Stinger/libffi
+  - Stinger/libffi (0.3.0)
 
 DEPENDENCIES:
   - Aspects
   - Stinger (from `../`)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://gitee.com/mirrors/CocoaPods-Specs.git:
     - Aspects
 
 EXTERNAL SOURCES:
@@ -16,8 +21,8 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
-  Stinger: 62ce4cd94935217a13a8db639b6f87364bba45e3
+  Stinger: e20e2ab12c24e32d20933c2733747d11b46a1698
 
 PODFILE CHECKSUM: 6df52b616ee208569510c4defb2313f601db9f5e
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.11.2

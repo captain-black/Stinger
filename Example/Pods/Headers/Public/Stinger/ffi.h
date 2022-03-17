@@ -1,1 +1,1 @@
-../../../../../Stinger/Classes/libffi/ffi.h
+../../../../../Stinger/libffi/darwin_common/include/ffi.h
